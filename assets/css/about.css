@@ -1,0 +1,245 @@
+.about-content {
+    align-items: start;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px; 
+    height: 50%;
+    width: 100%;
+}
+
+.grid-item {
+    background: var(--foreground); 
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: start;
+    justify-content: start;
+    position: relative;
+    gap: 20px;
+    border: 2px solid var(--border-color); 
+    border-radius: 20px;
+    height: 400px;
+    transition: all .3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(0.98);
+    border-color: var(--primary-color);
+}
+
+.item-2,
+.item-3 {
+    grid-column: span 2;
+}
+
+.item-3 {
+    gap: 25px;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    background: var(--foreground);
+    padding: 10px 15px;
+    border-radius: 12px;
+    gap: 15px;
+}
+
+.experiences {
+    overflow-y: auto;
+}
+
+.experiences::-webkit-scrollbar {
+    width: 8px;
+}
+
+.experiences::-webkit-scrollbar-track {
+    background: var(--foreground);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.experiences::-webkit-scrollbar-thumb {
+    background: var(--foreground);
+    border-radius: 12px;
+}
+
+.xp-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0px 20px;
+    padding: 10px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.xp-img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    border-radius: 9999px;
+}
+
+.xp {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.xp-title {
+    font-size: 16px;
+}
+
+.xp-description {
+    font-size: 16px;
+}
+
+.item-4 {
+    gap: 10px;
+}
+
+.grid-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+}
+
+.medias {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    background: var(--foreground);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: transform .3s ease;
+    width: 100%;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.social-media:hover {
+    transform: scale(1.02);
+    border-color: var(--primary-color);
+}
+
+.social-media .fab {
+    font-size: 35px;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 350px) {
+    .about-content {
+        margin-top: 180px;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        width: 100%;
+        position: relative;
+    }
+
+    .grid-item {
+        min-width: 100%;
+        height: auto;
+        grid-column: span 1;
+    }
+
+    .tech-stack {
+        position: relative;
+        overflow-y: scroll;
+        max-height: 392.562px;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    .experiences {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .xp-container {
+        padding: 0;
+    }
+
+    .xp-title {
+        font-size: 14px;
+    }
+
+    .xp-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-box {
+        height: auto;
+        gap: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .grid-item {
+        grid-column: span 1;
+        height: auto;
+    }
+
+    .social-box {
+        gap: 50px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1345px) {
+    .item-1,
+    .item-2 {
+        height: auto;
+    }
+}
